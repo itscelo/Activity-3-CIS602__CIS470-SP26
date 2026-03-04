@@ -3,7 +3,7 @@
 
 - Edit the file ```classifyTrangles.test.js``` and add new tests cases. There are some example test cases added to the ```classifyTrangles.test.js```.
 
-- You need to add following types of test cases:
+- You need to add the following types of test cases:
 - Robust Boundary Value Test Cases
 <img src="https://github.com/user-attachments/assets/7690e997-1f9e-4a5c-b7e1-96e566b93239" width=60%/>
 
@@ -13,16 +13,16 @@
 
 Check the slides on week 4 for the details.
 
-- Add comments for each test describing what is the type of the test (example: BVT or ECP)
+- Add comments for each test describing what the type of the test is (example: BVT or ECP)
 
-- You can run the test cases using the following commant in terminal
+- You can run the test cases using the following command in the terminal
 
 
 ```
 npm test
 ```
 
-- in case you bump into an issue, install the packages using through terminal in Codespaces:
+- in case you bump into an issue, install the packages using the terminal in Codespaces:
 ```
 npm install
 ```
@@ -72,7 +72,7 @@ console.log(triangleType);
 ## Deliverables:
 
 ### D1 (40 points)
-- When you push the code back to GitHub the test cases will run automatically in the actions (see the short video on myCourses), a copy of the raw actions text with the test cases passing or failing is required (20 points)
+- When you push the code back to GitHub, the test cases will run automatically in the actions. A copy of the raw actions text with the test cases passing or failing is required (20 points)
 - Screenshot of the test logs (20 points)
 
 <img src="https://github.com/user-attachments/assets/470af257-a9ed-49ce-8bb0-1d64ebe5f82b" width=80%/>
