@@ -27,19 +27,17 @@ describe('classifyTriangle: Required input conditions', () => {
     test('BVT: c = 200 (not a triangle)', () => expect(classifyTriangle(100, 100, 200)).toBe('Not a Triangle'));
     test('BVT: c = 201 (invalid)', () => expect(classifyTriangle(100, 100, 201)).toBe('Error: Input conditions C1, C2, or C3 failed.'));
 
+    test('BVT: Min valid Equilateral (1, 1, 1)', () => expect(classifyTriangle(1, 1, 1)).toBe('Equilateral'));
+    test('BVT: Max valid Equilateral (200, 200, 200)', () => expect(classifyTriangle(200, 200, 200)).toBe('Equilateral'));
+
     // Equivalence Class Partitioning
     test('ECP: Valid Equilateral', () => expect(classifyTriangle(5, 5, 5)).toBe('Equilateral'));
     test('ECP: Valid Isosceles (a=b)', () => expect(classifyTriangle(7, 7, 10)).toBe('Isosceles'));
     test('ECP: Valid Isosceles (b=c)', () => expect(classifyTriangle(10, 7, 7)).toBe('Isosceles'));
     test('ECP: Valid Isosceles (a=c)', () => expect(classifyTriangle(7, 10, 7)).toBe('Isosceles'));
     test('ECP: Valid Scalene', () => expect(classifyTriangle(3, 4, 5)).toBe('Scalene'));
+    test('ECP: Valid Scalene (10, 11, 12)', () => expect(classifyTriangle(10, 11, 12)).toBe('Scalene'));
     test('ECP: Not a Triangle (a+b=c)', () => expect(classifyTriangle(50, 60, 110)).toBe('Not a Triangle'));
     test('ECP: Not a Triangle (a+c=b)', () => expect(classifyTriangle(50, 110, 60)).toBe('Not a Triangle'));
     test('ECP: Not a Triangle (b+c=a)', () => expect(classifyTriangle(110, 50, 60)).toBe('Not a Triangle'));
-
-    // Additional Tests to reach requirement
-    test('BVT: Min valid Equilateral (1, 1, 1)', () => expect(classifyTriangle(1, 1, 1)).toBe('Equilateral'));
-    test('BVT: Max valid Equilateral (200, 200, 200)', () => expect(classifyTriangle(200, 200, 200)).toBe('Equilateral'));
-    test('ECP: Valid Scalene (10, 11, 12)', () => expect(classifyTriangle(10, 11, 12)).toBe('Scalene'));
 });
-
